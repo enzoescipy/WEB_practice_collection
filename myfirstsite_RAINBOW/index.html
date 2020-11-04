@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAINBOW</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        html, body
+        {
+            height:100%;
+            overflow: hidden;
+            
+        }
+        #title
+        {
+            text-align: center;
+            border-bottom: 5px dotted black ;
+            margin: 0px;
+            padding: 30px;
+            background-color: black;
+            color:white;
+        }
+        #container
+        {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            height:100%;
+            font-size: 50px;
+            animation-name: container;
+            animation-duration: 5s;
+        }
+        @keyframes container
+        {
+            from {height:0%}
+            to {height: 100%;}
+        }
+        .item
+        {
+            text-align: center;
+        }
+        .inputs
+        {
+            width:70%;
+            height:20%;
+            margin:10%;
+            font-size: 100%;
+            padding:0%;
+        }
+        #red
+        {
+            background-color: rgb(250, 182, 182);
+            height:100%;
+            animation-name: redd;
+            animation-duration: 11s;
+        }
+        @keyframes redd
+        {
+            from {height:0%}
+        }
+        #orange
+        {
+            background-color: rgb(243, 215, 164);
+            height:100%;
+            animation-name:orangee;
+            animation-duration: 9s;
+        }
+        @keyframes orangee
+        {
+            from {height:0%}
+        }
+        #yellow
+        {
+            background-color: rgb(240, 240, 175);
+            height:100%;
+            animation-name: yelloww;
+            animation-duration: 7s;
+        }
+        @keyframes yelloww
+        {
+            from {height:0%}
+        }
+        #green
+        {
+            background-color: rgb(180, 255, 180);
+            height:100%;
+            animation-name: greenn;
+            animation-duration: 5s;
+        }
+        @keyframes greenn
+        {
+            from {height:0%}
+        }
+        #blue
+        {
+            background-color: rgb(176, 176, 250);
+            height:100%;
+            animation-name: bluee;
+            animation-duration:7s;
+        }
+        @keyframes bluee
+        {
+            from {height:0%}
+        }
+        #indigo
+        {
+            background-color: rgb(220, 172, 255);
+            height:100%;
+            animation-name: indigoo;
+            animation-duration: 9s;
+        }
+        @keyframes indigoo
+        {
+            from {height:0%}
+        }
+        #violet
+        {
+            background-color: rgb(255, 170, 255);
+            height:100%;
+            animation-name:violett;
+            animation-duration: 11s;
+        }
+        @keyframes violett
+        {
+            from {height:0%}
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 id="title">//RAINBOW//</h1>
+    <div id="container">
+        <div class="item" id="red">
+            <input class="inputs" type="button" 
+            value="R"
+            onclick="
+            onc(0,'red','rgb(250, 182, 182)')
+            ">
+        </div>
+        <div class="item" id="orange">
+            <input class="inputs" type="button" 
+            value="A"
+            onclick="
+            onc(1,'orange','rgb(243, 215, 164)')
+            ">
+        </div>
+        <div class="item" id="yellow">
+            <input class="inputs" type="button" 
+            value="I"
+            onclick="
+            onc(2,'yellow','rgb(240, 240, 175)')
+            ">
+        </div>
+        <div class="item" id="green">
+            <input class="inputs" type="button" 
+            value="N"
+            onclick="
+            onc(3,'green','rgb(180, 255, 180)')
+            ">
+        </div>
+        <div class="item" id="blue">
+            <input class="inputs" type="button" 
+            value="B"
+            onclick="
+            onc(4,'blue','rgb(176, 176, 250)')
+            ">
+        </div>
+        <div class="item" id="indigo">
+            <input class="inputs" type="button" 
+            value="O"
+            onclick="
+            onc(5,'indigo','rgb(220, 172, 255)')
+            ">
+        </div>
+        <div class="item" id="violet">
+            <input class="inputs" type="button" 
+            value="W"
+            onclick="
+            onc(6,'violet','rgb(255, 170, 255)')
+            ">
+        </div>
+    </div>
+
+    <script>
+
+        function onc(colornum,colortag,rgb)
+        {
+            if (colorlist[colornum] === false)
+            {
+                $('#'+colortag).css('background-color',colortag);
+                colorlist[colornum] = true;
+            }
+            else
+            {
+                $('#'+colortag).css('background-color',rgb);
+                colorlist[colornum] = false;
+            } 
+        }
+
+        var colorlist = [false,false,false,false,false,false,false]
+    
+        var title = document.getElementById("title");
+        
+    
+    </script>
+
+</body>
+</html>
